@@ -1,37 +1,48 @@
 <html>
-<script src="waveform.js"></script>
+<script src="wavesurfer.min.js"></script>
 <!-- <script src="//connect.soundcloud.com/sdk.js"></script> -->
 <script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+	// var data = [];
 
-var data = [];
+	// var waveform = new Waveform({
+	//   container: document.getElementById("example4"),
+	//   interpolate: false
+	// });
+	// var ctx = waveform.context;
 
-var waveform = new Waveform({
-  container: document.getElementById("example4"),
-  interpolate: false
+	// var gradient = ctx.createLinearGradient(0, 0, 0, waveform.height);
+	// gradient.addColorStop(0.0, "green");
+	// gradient.addColorStop(1.0, "blue");
+	// waveform.innerColor = gradient;
+
+	// var i=0;
+	// setInterval(function(){
+	//   data.push(Math.cos(i++/25) - 0.2 + Math.random()*0.3);
+	//   waveform.update({
+	//     data: data
+	//   });
+	//   console.log('hi');
+	// }, 50);
+
+
+	var wavesurfer = Object.create(WaveSurfer);
+
+	wavesurfer.init({
+	    container: document.querySelector('#wave'),
+	    waveColor: 'violet',
+	    progressColor: 'purple'
+	});
+
+	wavesurfer.on('ready', function () {
+	    wavesurfer.play();
+	    console.log('hi');
+	});
+
+	wavesurfer.load('serial-s01-e01.mp3');
 });
-var ctx = waveform.context;
-
-var gradient = ctx.createLinearGradient(0, 0, 0, waveform.height);
-gradient.addColorStop(0.0, "#f60");
-gradient.addColorStop(1.0, "#ff1b00");
-waveform.innerColor = gradient;
-
-var i=0;
-setInterval(function(){
-	console.log("Inside Set Interval");
-  data.push(Math.cos(i++/25) - 0.2 + Math.random()*0.3);
-  waveform.update({
-    data: data
-  });
-}, 50);
 
 
-document.addEventListener("DOMContentLoaded", setInterval());
-
-//jQuery attempt
-// $(document).ready(){
-	
-// }
 
 </script>
 
@@ -39,10 +50,9 @@ document.addEventListener("DOMContentLoaded", setInterval());
 <body>
 
 
-<div id="example4">
-	<canvas width="550" height="50"></canvas>
+<div id="wave">
+
 </div>
-<div id="test"></div>
 
 
 </body>
