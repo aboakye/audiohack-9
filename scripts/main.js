@@ -1,5 +1,12 @@
-var $audio1 = $('#1')[0];
+
+var $quoteInput = $('#quote-input').value;
+
 
 $(document).ready(function() {
-	$audio1.play();
+	// var $audio1 = $('audio')[0];
+	// $('.react-btn').click(function(){
+	// 	console.log($quoteInput);
+	// 	$('.big-quote').html($quoteInput);
+	// });
+	// $audio1.play();
 });

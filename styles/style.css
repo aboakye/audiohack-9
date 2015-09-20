@@ -9,6 +9,32 @@ h2, h3, h4, h5, p {
 	margin: .5em, 0;
 }
 
+/*header*/
+.youtube-logo-container {
+	width: 30%;
+	float: left;
+}
+.youtube-logo {
+	width: 100%;
+}
+
+.search-box {
+	float: left;
+	width: 60%;
+}
+
+.search-btn {
+	float: left;
+	width: 10%;
+}
+
+input[type="text"] {
+	width: 60%;
+	margin: .5em 0;
+}
+
+
+/*container*/
 .audio-emoji-box {
 	background-color: gray;
 	height: 50px;
@@ -17,6 +43,22 @@ h2, h3, h4, h5, p {
 	float: left;
 }
 
+/*input box and all things in it*/
+.audio-input-wrapper {
+	width: 50%;
+	float: left;
+}
+
+.react-btn {
+	background-color: pink;
+	border: none;
+	width: 97%;
+	height: 50px;
+	margin: .5em 0;
+}
+
+
+/*reaction box and all things in it*/
 .audio-emoji-wrapper {
 }
 
@@ -24,9 +66,4 @@ h2, h3, h4, h5, p {
 	display: inline-block;
 	position: relative;
 	width: 50%;
-}
-
-.audio-input-wrapper {
-	width: 50%;
-	float: left;
 }
