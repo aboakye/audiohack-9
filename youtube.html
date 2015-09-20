@@ -20,6 +20,7 @@
         <div class="earmoji-logo">
           <img class="logo-img" src="assets/LogoV2.png" />
         </div>
+
         <div class="captured-audio">
           <p class="captured-audio-title">React to this:</p>
           <audio id="captured">
@@ -32,14 +33,15 @@
           </span>
           <br />
         </div>
+
         <br />
-        <div class="new-audio">
+        <!-- <div class="new-audio">
           <p class="new-title">What do you want to call this?</p>
           <form>
             <input id="new-audio-name" type="text"> 
           </form>
         </div>
-
+ -->
         <div class="audio-reaction-container clear">
           <div class="audio-reaction">
             <div id="serial-btn" class="audio-emoji-box">
@@ -134,7 +136,7 @@
         </div>
         <div class="result-audio">
           <p class="result-audio-title">Play it back:</p>
-          <audio id="result">
+          <audio id="result" autoplay="false">
             <source src="assets/fiorina_Yonce.m4a" type="audio/mpeg">
           </audio>
           <span class="new-play-btn fa fa-play"></span>
@@ -144,7 +146,9 @@
           </span>
           <br />
         </div>
+
         <br />
+
         <div class="export-share">
           <button class="twitter-share"><i class="fa fa-twitter"></i></button>
           <button class="facebook-share"><i class="fa fa-facebook"></i></button>
@@ -152,6 +156,8 @@
         </div>
       </div>
     </div>
+
+
     <div class="header">
       <div class="youtube-logo-container">
         <img class="youtube-logo" src="assets/youtube.png" />

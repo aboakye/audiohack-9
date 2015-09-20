@@ -4,6 +4,8 @@ $(document).ready(function() {
 		pauseBtn = $('pause-btn'),
 		progress = $('.progress-filled');
 
+	capturedAudio.pause();
+
 	function capUpdateProgress() { //progress bar tracks audio duration and adjusts width according to current time
 	  var value = 0;
 	  if (capturedAudio.currentTime > 0) {
@@ -12,48 +14,42 @@ $(document).ready(function() {
 	  progress.css('width', value + '%');
 	}
 
-	function capPlayPause() { //on click play and pause buttons toggle
-	  pauseBtn.removeClass('hide');
-	  if (capturedAudio.paused === false) {
-	      capturedAudio.pause();
-	      playBtn.removeClass('hide');
-	      pauseBtn.addClass('hide');
-	  } else {
-	      capturedAudio.play();
-	      playBtn.addClass('hide');
-	      pauseBtn.removeClass('hide');
-	  }
-	}
 
-	var newAudio = $('#result-audio')[0],
-		newPlayBtn = $('new-play-btn'),
-		newPauseBtn = $('new-pause-btn'),
+	$('.captured-audio').click(function() {
+		if (capturedAudio.paused === false) {
+		    capturedAudio.pause();
+		    console.log('hi');
+		} else {
+		    capturedAudio.play();
+		}
+	});
+
+	var newAudio = $('#result')[0],
+		newPlayBtn = $('.new-play-btn'),
+		newPauseBtn = $('.new-pause-btn'),
 		newprogress = $('.new-progress-filled');
+
+	newAudio.pause();
 
 	function newUpdateProgress() { //progress bar tracks audio duration and adjusts width according to current time
 	  var value = 0;
-	  if (capturedAudio.currentTime > 0) {
-	     value = Math.floor((100 / capturedAudio.duration) * capturedAudio.currentTime);
+	  if (newAudio.currentTime > 0) {
+	     value = Math.floor((100 / newAudio.duration) * newAudio.currentTime);
 	  }
 	  progress.css('width', value + '%');
 	}
 
-	function newPlayPause() { //on click play and pause buttons toggle
-	  pauseBtn.removeClass('hide');
-	  if (capturedAudio.paused === false) {
-	      capturedAudio.pause();
-	      playBtn.removeClass('hide');
-	      pauseBtn.addClass('hide');
-	  } else {
-	      capturedAudio.play();
-	      playBtn.addClass('hide');
-	      pauseBtn.removeClass('hide');
-	  }
-	}
+	newPlayBtn.click(function() {
+		if (newAudio.paused === false) {
+		    newAudio.pause();
+		    console.log('hi');
+		} else {
+		    newAudio.play();
+		}
+	});
 
-	playBtn.click(capPlayPause());
 	capturedAudio.addEventListener('timeupdate', capUpdateProgress, false);
-	newPlayBtn.click(newPlayPause());
+
 	newAudio.addEventListener('timeupdate', newUpdateProgress, false);
 
 	var serialAud = $('#serial'),
