@@ -4,7 +4,7 @@ $(document).ready(function() {
 		pauseBtn = $('pause-btn'),
 		progress = $('.progress-filled');
 
-	function updateProgress() { //progress bar tracks audio duration and adjusts width according to current time
+	function capUpdateProgress() { //progress bar tracks audio duration and adjusts width according to current time
 	  var value = 0;
 	  if (capturedAudio.currentTime > 0) {
 	     value = Math.floor((100 / capturedAudio.duration) * capturedAudio.currentTime);
@@ -12,7 +12,7 @@ $(document).ready(function() {
 	  progress.css('width', value + '%');
 	}
 
-	function playPause() { //on click play and pause buttons toggle
+	function capPlayPause() { //on click play and pause buttons toggle
 	  pauseBtn.removeClass('hide');
 	  if (capturedAudio.paused === false) {
 	      capturedAudio.pause();
@@ -25,8 +25,36 @@ $(document).ready(function() {
 	  }
 	}
 
-	playBtn.click(playPause());
-	capturedAudio.addEventListener('timeupdate', updateProgress, false);
+	var newAudio = $('#result-audio')[0],
+		newPlayBtn = $('new-play-btn'),
+		newPauseBtn = $('new-pause-btn'),
+		newprogress = $('.new-progress-filled');
+
+	function newUpdateProgress() { //progress bar tracks audio duration and adjusts width according to current time
+	  var value = 0;
+	  if (capturedAudio.currentTime > 0) {
+	     value = Math.floor((100 / capturedAudio.duration) * capturedAudio.currentTime);
+	  }
+	  progress.css('width', value + '%');
+	}
+
+	function newPlayPause() { //on click play and pause buttons toggle
+	  pauseBtn.removeClass('hide');
+	  if (capturedAudio.paused === false) {
+	      capturedAudio.pause();
+	      playBtn.removeClass('hide');
+	      pauseBtn.addClass('hide');
+	  } else {
+	      capturedAudio.play();
+	      playBtn.addClass('hide');
+	      pauseBtn.removeClass('hide');
+	  }
+	}
+
+	playBtn.click(capPlayPause());
+	capturedAudio.addEventListener('timeupdate', capUpdateProgress, false);
+	newPlayBtn.click(newPlayPause());
+	newAudio.addEventListener('timeupdate', newUpdateProgress, false);
 
 	var serialAud = $('#serial'),
 		serialBtn = $('#serial-btn');
@@ -83,6 +111,13 @@ $(document).ready(function() {
 
 	sadBtn.click(function() {
 		sadAud.get(0).play();
+	});
+
+	var lilJonAud = $('#lilJon'),
+		lilJonBtn = $('#lilJon-btn');
+
+	lilJonBtn.click(function() {
+		lilJonAud.get(0).play();
 	});
 	
 	

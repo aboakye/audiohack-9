@@ -11,11 +11,10 @@
     <script type="text/javascript" src="scripts/main.js"></script>
   </head>
   <body>
-    <div class="browser-head">
+    <div id="earmoji-show" class="browser-head">
       <img class="browser-img" src="assets/audiohackathonHeader.png"/>
     </div>
     <div class="earmoji-header">
-      <button id="earmoji-show" class="earmoji-toggle"><img class="earmoji-btn-img" src="assets/ear_icon.png" /></button>
 
       <div class="earmoji-plugin-container">
         <div class="earmoji-logo">
@@ -24,7 +23,7 @@
         <div class="captured-audio">
           <p class="captured-audio-title">React to this:</p>
           <audio id="captured">
-            <source src="assets/serialTheme.mp3" type="audio/mpeg">
+            <source src="assets/fiorina.m4a" type="audio/mpeg">
           </audio>
           <span class="play-btn fa fa-play"></span>
           <span class="progress">
@@ -39,7 +38,6 @@
           <form>
             <input id="new-audio-name" type="text"> 
           </form>
-          <span class="play-btn"></span><span class="progress-bar"><span class="progress-filled"></span></span>
         </div>
 
         <div class="audio-reaction-container clear">
@@ -108,7 +106,12 @@
             </div>
           </div>
           <div class="audio-reaction">
-            <div class="audio-emoji-box"></div>
+            <div id="lilJon-btn" class="audio-emoji-box">
+              <img class="earmoji-img lilJon-img" src="assets/lilJon.png" />
+              <audio id="lilJon">
+                <source src="assets/lilJon.mp3" type="audio/mpeg">
+              </audio>
+            </div>
           </div>
           <div class="audio-reaction">
             <div class="audio-emoji-box"></div>
@@ -128,6 +131,24 @@
           <div class="audio-reaction">
             <div class="audio-emoji-box"></div>
           </div>
+        </div>
+        <div class="result-audio">
+          <p class="result-audio-title">Play it back:</p>
+          <audio id="result">
+            <source src="assets/fiorina_Yonce.m4a" type="audio/mpeg">
+          </audio>
+          <span class="new-play-btn fa fa-play"></span>
+          <span class="progress">
+            <div class="new-progress-bar"></div>
+            <div class="new-progress-filled"></div>
+          </span>
+          <br />
+        </div>
+        <br />
+        <div class="export-share">
+          <button class="twitter-share"><i class="fa fa-twitter"></i></button>
+          <button class="facebook-share"><i class="fa fa-facebook"></i></button>
+          <button class="export-btn">EXPORT</button>
         </div>
       </div>
     </div>

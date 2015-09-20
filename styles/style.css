@@ -15,8 +15,18 @@ body {
 }
 
 button {
+
+}
+
+.export-btn {
 	margin: 0;
 	padding: 0;
+	background-color: #ee396c;
+	border: none;
+	height: 40px;
+	width: 25%;
+	font-family: 'Yanone Kaffeesatz', sans-serif; 
+	font-size: 2em;
 }
 
 .hide {
@@ -33,6 +43,9 @@ button {
 }
 
 /*header*/
+.browser-head {
+	cursor: pointer;
+}
 .browser-img {
 	width: 100%;
 }
@@ -59,7 +72,7 @@ button {
 	width: 40%;
 	position: absolute;
 	right: 0;
-	margin-top: 2.5em;
+	margin-top: 0;
 	background-color: #fff;
 	border: 1px solid #f1f1f1;
 }
@@ -74,14 +87,17 @@ button {
 }
 
 .captured-audio,
-.audio-reaction-container {
+.audio-reaction-container,
+.result-audio {
 	background-color: #f1f1f1;
-	margin: .5em;
+	margin: .5em .5em .5em 0;
 	padding: 1em;
-	position: relative;
+	display: inline-table;
+	width: 90%;
 }
 
-.play-btn {
+.play-btn,
+.new-play-btn {
 	float: left;
 	margin-right: .5em;
 }
@@ -93,16 +109,38 @@ button {
 
 }
 
-.progress-bar {
+.progress-bar,
+.new-progress-bar {
 	border-top: 1px solid #bbb;
 }
 
-.progress-filled {
-	border-top: 3px solid #bbb; 
+.progress-filled,
+.new-progress-filled {
+	border-top: 4px solid #acdee2; 
 }
 
 .audio-reaction {
 	cursor: pointer;
+}
+
+.audio-reaction-container {
+	width: 90%;
+}
+
+.export-share {
+	width: 100%;
+	text-align: center;
+}
+
+.twitter-share,
+.facebook-share {
+	margin: 0;
+	padding: 0;
+	background-color: #ee396c;
+	border: none;
+	height: 40px;
+	width: 25%;
+	font-size: 2em;
 }
 
 .youtube-logo-container {
@@ -133,7 +171,7 @@ button {
 
 .search-box {
 	float: left;
-	width: 60%;
+	width: 50%;
 }
 
 .search-btn {
@@ -142,7 +180,7 @@ button {
 }
 
 input[type="text"] {
-	width: 60%;
+	width: 90%;
 	margin: .5em 0;
 	height: 2em;
 }
@@ -190,7 +228,5 @@ input[type="text"] {
 }
 
 .audio-reaction-wrapper {
-	display: inline-block;
-	position: relative;
 	width: 50%;
 }
