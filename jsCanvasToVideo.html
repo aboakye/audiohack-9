@@ -1,7 +1,45 @@
 <html>
+
 <script src="wavesurfer.min.js"></script>
+
 <!-- <script src="//connect.soundcloud.com/sdk.js"></script> -->
+
+<!-- AUDIO SNIPPET -->
 <script type="text/javascript">
+	 
+	function pullMP3(episode){
+
+		musicStream = function(url){
+			var xmlhttp = new XMLHttpRequest();
+
+		      	xmlhttp.onreadystatechange = function(){
+			      	if (xmlhttp.readyState == 4 && xmlhttp.status==0){
+			      		// callback(xmlhttp.responseText);
+			      		//document.getElementById("ios_message").value
+			      		var header = xmlhttp.getResponseHeader;
+			      		var responseText = header.responseText;
+			      	}
+		      	};
+
+		    //TODO: SECURITY UPDATE
+		    // Make this calling behavior secret : Maybe add it to a python class
+	      	xmlhttp.open("GET",url,true);
+	      	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	      	xmlhttp.send();
+		 }
+
+		 musicStream("http://hackathon.thisamericanlife.org/api/episodes/"+episode);
+	}
+
+
+</script>
+
+<!-- WAVEFORM -->
+<script type="text/javascript">
+	// document.addEventListener("DOMContentLoaded", function(
+
+	// var data = [];
+
 document.addEventListener('DOMContentLoaded', function () {
 	// var data = [];
 
@@ -43,15 +81,25 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
 </script>
 
 
 <body>
 
 
-<div id="wave">
 
+<p>Episode Number:</p>
+	<div class="same_line">
+		<button onclick="pullMP3(500)">Send Notification</button>
+	</div>
+
+<script>
+function myFunction() {
+    document.getElementById("frm1").submit();
+}
+</script>
+
+<div id="wave">
 </div>
 
 

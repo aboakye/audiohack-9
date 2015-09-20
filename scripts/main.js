@@ -91,4 +91,5 @@ $(document).ready(function() {
 		$('.earmoji-plugin-container').toggle('hide');
 	});
 
+
 });
