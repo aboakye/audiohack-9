@@ -1,0 +1,32 @@
+h1 {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 4em;
+	margin: 0;
+}
+
+h2, h3, h4, h5, p {
+	font-family: 'Arimo', sans-serif;
+	margin: .5em, 0;
+}
+
+.audio-emoji-box {
+	background-color: gray;
+	height: 50px;
+	width: 50px;
+	margin: 5px;
+	float: left;
+}
+
+.audio-emoji-wrapper {
+}
+
+.audio-reaction-wrapper {
+	display: inline-block;
+	position: relative;
+	width: 50%;
+}
+
+.audio-input-wrapper {
+	width: 50%;
+	float: left;
+}
