@@ -17,61 +17,118 @@
     </div>
     <div class="earmoji-header">
       <button id="earmoji-show" class="earmoji-toggle"><img class="earmoji-btn-img" src="assets/ear_icon.png" /></button>
-      <div class="earmoji-plugin-container hide">
-        <div class="audio-reaction">
-          <div id="serial-btn" class="audio-emoji-box">
-            <img class="earmoji-img serial-img" src="assets/serial.png" />
-            <audio id="serial">
-              <source src="assets/serialTheme.mp3" type="audio/mpeg">
-            </audio>
+
+      <div class="earmoji-plugin-container">
+        <div class="earmoji-logo">
+          <img class="logo-img" src="assets/LogoV2.png" />
+        </div>
+        <div class="captured-audio">
+          <p class="captured-audio-title">React to this:</p>
+          <audio id="captured">
+            <source src="assets/serialTheme.mp3" type="audio/mpeg">
+          </audio>
+          <span class="play-btn fa fa-play"></span>
+          <span class="progress">
+            <div class="progress-bar"></div>
+            <div class="progress-filled"></div>
+          </span>
+          <br />
+        </div>
+        <br />
+        <div class="new-audio">
+          <p class="new-title">What do you want to call this?</p>
+          <form>
+            <input id="new-audio-name" type="text"> 
+          </form>
+          <span class="play-btn"></span><span class="progress-bar"><span class="progress-filled"></span></span>
+        </div>
+
+        <div class="audio-reaction-container clear">
+          <div class="audio-reaction">
+            <div id="serial-btn" class="audio-emoji-box">
+              <img class="earmoji-img serial-img" src="assets/serial.png" />
+              <audio id="serial">
+                <source src="assets/serialTheme.mp3" type="audio/mpeg">
+              </audio>
+            </div>
           </div>
-        </div>
-        <div id="1" class="audio-reaction">
-          <div id="yonce-btn" class="audio-emoji-box">
-            <img class="earmoji-img yonce-img" src="assets/yonce.png" />
-            <audio id="yonce">
-              <source src="assets/yonceEmoji.m4a" type="audio/mpeg">
-            </audio>
+          <div class="audio-reaction">
+            <div id="yonce-btn" class="audio-emoji-box">
+              <img class="earmoji-img yonce-img" src="assets/yonce.png" />
+              <audio id="yonce">
+                <source src="assets/yonceEmoji.m4a" type="audio/mpeg">
+              </audio>
+            </div>
           </div>
-        </div>
-        <div class="audio-reaction">
-          <div class="audio-emoji-box"></div>
-        </div>
-        <div class="audio-reaction">
-          <div class="audio-emoji-box"></div>
-        </div>
-        <div class="audio-reaction">
-          <div class="audio-emoji-box"></div>
-        </div>
-        <div class="audio-reaction">
-          <div class="audio-emoji-box"></div>
-        </div>
-        <div class="audio-reaction">
-          <div class="audio-emoji-box"></div>
-        </div>
-        <div class="audio-reaction">
-          <div class="audio-emoji-box"></div>
-        </div>
-        <div class="audio-reaction">
-          <div class="audio-emoji-box"></div>
-        </div>
-        <div class="audio-reaction">
-          <div class="audio-emoji-box"></div>
-        </div>
-        <div class="audio-reaction">
-          <div class="audio-emoji-box"></div>
-        </div>
-        <div class="audio-reaction">
-          <div class="audio-emoji-box"></div>
-        </div>
-        <div class="audio-reaction">
-          <div class="audio-emoji-box"></div>
-        </div>
-        <div class="audio-reaction">
-          <div class="audio-emoji-box"></div>
-        </div>
-        <div class="audio-reaction">
-          <div class="audio-emoji-box"></div>
+          <div class="audio-reaction">
+            <div id="airhorn-btn" class="audio-emoji-box">
+              <img class="earmoji-img airhorn-img" src="assets/Airhorns.png" />
+              <audio id="airhorn">
+                <source src="assets/Airhorns.m4a" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+          <div class="audio-reaction">
+            <div id="gabriel-btn" class="audio-emoji-box">
+              <img class="earmoji-img gabriel-img" src="assets/gabriel.png" />
+              <audio id="gabriel">
+                <source src="assets/SolsburyHill.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+          <div class="audio-reaction">
+            <div id="snoop-btn" class="audio-emoji-box">
+              <img class="earmoji-img snoop-img" src="assets/snoop.png" />
+              <audio id="snoop">
+                <source src="assets/snoopDog.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+          <div class="audio-reaction">
+            <div id="clap-btn" class="audio-emoji-box">
+              <img class="earmoji-img clap-img" src="assets/clap.png" />
+              <audio id="clap">
+                <source src="assets/applause.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+          <div class="audio-reaction">
+            <div id="laugh-btn" class="audio-emoji-box">
+              <img class="earmoji-img laugh-img" src="assets/laugh.png" />
+              <audio id="laugh">
+                <source src="assets/laugh.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+          <div class="audio-reaction">
+            <div id="sad-btn" class="audio-emoji-box">
+              <img class="earmoji-img sad-img" src="assets/sad.png" />
+              <audio id="sad">
+                <source src="assets/sad.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+          <div class="audio-reaction">
+            <div class="audio-emoji-box"></div>
+          </div>
+          <div class="audio-reaction">
+            <div class="audio-emoji-box"></div>
+          </div>
+          <div class="audio-reaction">
+            <div class="audio-emoji-box"></div>
+          </div>
+          <div class="audio-reaction">
+            <div class="audio-emoji-box"></div>
+          </div>
+          <div class="audio-reaction">
+            <div class="audio-emoji-box"></div>
+          </div>
+          <div class="audio-reaction">
+            <div class="audio-emoji-box"></div>
+          </div>
+          <div class="audio-reaction">
+            <div class="audio-emoji-box"></div>
+          </div>
         </div>
       </div>
     </div>
