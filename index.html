@@ -16,6 +16,12 @@
       <h3>React to what that guy said that one time.</h3>
     </div>
 
+    <div class="results">
+      <div class="result-quote">
+        <h3 class="big-quote">"Forty years ago, I smoked marijuana."</h3>
+      </div>
+    </div>
+
     <div class="audio-emoji-wrapper">
       <div class="audio-input-wrapper">
         <div class="audio-input">
@@ -23,13 +29,18 @@
             <p>Upload your file!</p>
             <input type="file" name="audio input">
           </form>
+          <form class="text-input">
+            <p>What're they saying?</p>
+            <input id="quote-input" class="text-box" type="text">
+          </form>
+          <button class="react-btn"><p>REACT</p></button>
         </div>
       </div>
 
       <div class="audio-reaction-wrapper">
         <div class="audio-reaction">
           <div class="audio-emoji-box">
-            <audio id="1">
+            <audio >
               <source src="assets/hammering.mp3" type="audio/mpeg">
             </audio>
           </div>
