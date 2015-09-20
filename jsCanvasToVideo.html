@@ -1,48 +1,90 @@
 <html>
-<script src="waveform.js"></script>
+<!-- <script src="waveform.js"></script> -->
 <!-- <script src="//connect.soundcloud.com/sdk.js"></script> -->
+
+<!-- AUDIO SNIPPET -->
 <script type="text/javascript">
+	 
+	function pullMP3(episode){
 
-var data = [];
+		musicStream = function(url){
+			var xmlhttp = new XMLHttpRequest();
 
-var waveform = new Waveform({
-  container: document.getElementById("example4"),
-  interpolate: false
-});
-var ctx = waveform.context;
+		      	xmlhttp.onreadystatechange = function(){
+			      	if (xmlhttp.readyState == 4 && xmlhttp.status==0){
+			      		// callback(xmlhttp.responseText);
+			      		//document.getElementById("ios_message").value
+			      		var header = xmlhttp.getResponseHeader;
+			      		var responseText = header.responseText;
+			      	}
+		      	};
 
-var gradient = ctx.createLinearGradient(0, 0, 0, waveform.height);
-gradient.addColorStop(0.0, "#f60");
-gradient.addColorStop(1.0, "#ff1b00");
-waveform.innerColor = gradient;
+		    //TODO: SECURITY UPDATE
+		    // Make this calling behavior secret : Maybe add it to a python class
+	      	xmlhttp.open("GET",url,true);
+	      	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	      	xmlhttp.send();
+		 }
 
-var i=0;
-setInterval(function(){
-	console.log("Inside Set Interval");
-  data.push(Math.cos(i++/25) - 0.2 + Math.random()*0.3);
-  waveform.update({
-    data: data
-  });
-}, 50);
+		 musicStream("http://hackathon.thisamericanlife.org/api/episodes/"+episode);
+	}
 
 
-document.addEventListener("DOMContentLoaded", setInterval());
+</script>
 
-//jQuery attempt
-// $(document).ready(){
-	
-// }
+<!-- WAVEFORM -->
+<script type="text/javascript">
+	// document.addEventListener("DOMContentLoaded", function(
 
+	// var data = [];
+
+	// var waveform = new Waveform({container: document.getElementById("example4"),interpolate: false});
+	// var ctx = waveform.context;
+
+	// var gradient = ctx.createLinearGradient(0, 0, 0, waveform.height);
+	// gradient.addColorStop(0.0, "#f60");
+	// gradient.addColorStop(1.0, "#ff1b00");
+	// waveform.innerColor = gradient;
+
+	// var i=0;
+	// setInterval(function(){
+	// 	console.log("Inside Set Interval");
+	//   data.push(Math.cos(i++/25) - 0.2 + Math.random()*0.3);
+	//   waveform.update({
+	//     data: data
+	//   });
+	// }, 50);
+
+	// 	));
 </script>
 
 
 <body>
 
 
-<div id="example4">
+<p>Episode Number:</p>
+	<div class="same_line">
+		<button onclick="pullMP3(500)">Send Notification</button>
+	</div>
+
+
+<!-- <form id="frm1" action="form_action.asp">
+  First name: <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br><br>
+  <input type="button" onclick="myFunction()" value="Submit">
+</form> -->
+
+<script>
+function myFunction() {
+    document.getElementById("frm1").submit();
+}
+</script>
+
+
+<!-- <div id="example4">
 	<canvas width="550" height="50"></canvas>
 </div>
-<div id="test"></div>
+<div id="test"></div> -->
 
 
 </body>

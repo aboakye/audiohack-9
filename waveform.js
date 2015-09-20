@@ -6,7 +6,7 @@
 
     Waveform.name = 'Waveform';
 
-    function Waveform(options) {
+    var Waveform = function(options) {
       this.redraw = __bind(this.redraw, this);
       this.container = options.container;
       this.canvas = options.canvas;
