@@ -9,13 +9,75 @@ h2, h3, h4, h5, p {
 	margin: .5em, 0;
 }
 
+body {
+	margin-top: 0;
+	margin-left: 0;
+}
+
+button {
+	margin: 0;
+	padding: 0;
+}
+
+.hide {
+	display: none;
+}
+
 /*header*/
+.browser-img {
+	width: 100%;
+}
+
+.earmoji-header {
+	width: 100%;
+}
+
+.earmoji-toggle {
+	float: right;
+	width: 5%;
+	cursor: pointer;
+}
+
+.earmoji-btn-img {
+	width: 100%;
+}
+
+.earmoji-img {
+	width: 100%;
+}
+
+.earmoji-plugin-container {
+	width: 40%;
+	position: absolute;
+	right: 0;
+	margin-top: 2.5em;
+	background-color: #ddd;
+}
+
 .youtube-logo-container {
 	width: 30%;
 	float: left;
 }
 .youtube-logo {
 	width: 100%;
+}
+
+.youtube-footer {
+	width: 100%;
+	margin-top: 2em;
+	border: 1px solid #f1f1f1;
+}
+
+.header {
+	clear: both;
+	height: 100px;
+	background-color: #fff;
+}
+
+.youtube-page-container {
+	background-color: #f1f1f1;
+	clear: both;
+	height: 100%;
 }
 
 .search-box {
@@ -31,12 +93,26 @@ h2, h3, h4, h5, p {
 input[type="text"] {
 	width: 60%;
 	margin: .5em 0;
+	height: 2em;
 }
 
+.video-container {
+	width: 50%;
+	float: left;
+}
+
+.sidebar-container {
+	width: 40%;
+	float: left;
+	margin-left: 1em;
+}
+
+.sidebar {
+	width: 100%;
+}
 
 /*container*/
 .audio-emoji-box {
-	background-color: gray;
 	height: 50px;
 	width: 50px;
 	margin: 5px;

@@ -1,25 +1,30 @@
 
-var $quoteInput = $('#quote-input').value;
-
 
 $(document).ready(function() {
-	// var $audio1 = $('audio')[0];
-	// $('.react-btn').click(function(){
-	// 	console.log($quoteInput);
-	// 	$('.big-quote').html($quoteInput);
-	// });
-	// $audio1.play();
-	//javascript: 
 
 	//CRAZY opens a new window with minimal header || not working with video
 	// window.open(location.href, "detab", "toolbar=0"); 
 	// window.close();
-	// console.log("Runn");
-	
-	// function(e)  {
- //        var currentAttrValue = jQuery(this).attr('href');
 
- //        // Show/Hide Tabs
- //        jQuery('.tabs ' + currentAttrValue).siblings().slideUp(400);
- //    }
+
+	var serialAud = $('#serial'),
+		serialBtn = $('#serial-btn');
+
+	serialBtn.click(function() {
+		serialAud.get(0).play();
+	});
+
+	var yonceAud = $('#yonce'),
+		yonceBtn = $('#yonce-btn');
+
+	yonceBtn.click(function() {
+		yonceAud.get(0).play();
+	});
+	
+
+	$( "#earmoji-show" ).click(function() {
+		$('.earmoji-plugin-container').toggle('hide');
+	});
+
+
 });
