@@ -36,10 +36,10 @@ $(document).ready(function() {
 	  if (newAudio.currentTime > 0) {
 	     value = Math.floor((100 / newAudio.duration) * newAudio.currentTime);
 	  }
-	  progress.css('width', value + '%');
+	  newprogress.css('width', value + '%');
 	}
 
-	newPlayBtn.click(function() {
+	$('.result-audio').click(function() {
 		if (newAudio.paused === false) {
 		    newAudio.pause();
 		    console.log('hi');
